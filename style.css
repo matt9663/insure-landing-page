@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  font-family: var(--mainFont);
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--veryDarkViolet)
+}
+
+:root {
+  --darkViolet: hsl(256, 26%, 20%);
+  --grayBlue: hsl(216, 30%, 68%);
+  --veryDarkViolet: hsl(270, 9%, 17%);
+  --darkGreyViolet: hsl(273, 4%, 51%);
+  --veryLightGrey: hsl(0, 0%, 98%);
+  --mainFont: 'Karla', sans-serif;
+  --headingFont: 'DM Serif Display', serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.nav-container {
+  display: inline-flex;
+}
+
+.hero-wrapper {
+  background-color:  var(--darkViolet);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-text-elements {
+  text-align: center;
+  color: var(--veryLightGrey);
+  padding: 20px 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--headingFont);
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-size: 3.2rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.link-button {
+  text-align: center;
+  color: var(--veryLightGrey);
+  border: 2px solid var(--veryLightGrey);
+  padding: 10px 20px;
+  letter-spacing: .3rem;
+}
+
+.about-wrapper {
+  text-align: center;
+  color: var(--veryDarkViolet);
+}
+.about-point {
+  padding: 10px 0;
+}
+
+.about-point p {
+  color: var(--darkGreyViolet);
+  line-height: 1.60rem;
+}
+
+.more-info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--darkViolet);
+  color: var(--veryLightGrey);
+  padding: 50px 10px;
+}
+
+.more-info-header {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+h5 {
+  color: grey
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin:0;
+}
+
+footer {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-icons-wrapper{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.footer-category-link {
+  color: var(--darkViolet);
+}
