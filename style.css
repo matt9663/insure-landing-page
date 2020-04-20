@@ -9,7 +9,10 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--veryDarkViolet)
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 :root {
@@ -23,15 +26,86 @@ a {
 }
 
 .header {
+  width: 100%;
+  margin: 0;
+}
+
+.header-icons {
+  height: 8vh;
+  padding: 10px;
+  background-color: #ffffff;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 10px;
 }
 
 .nav-container {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: var(--darkViolet);
+  color: var(--veryLightGrey);
+  text-align: center;
+  background-image: url('./images/bg-pattern-mobile-nav.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  transition: linear .3s;
+  z-index:5;
 }
+
+.nav-options {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.noScroll {
+  overflow: hidden;
+  position: fixed;
+}
+
+.nav-options li a {
+  color: var(--veryLightGrey);
+  font-size: 1.25rem;
+  letter-spacing: .25rem;
+}
+
+.nav-options li a:hover {
+  text-decoration: underline;
+}
+
+#plans-link-button {
+  padding: 10px 80px;
+}
+
+#plans-link-button:hover {
+  text-decoration: none;
+}
+
+.link-button {
+  transition: ease-in .1s;
+}
+
+.link-button:hover {
+  color: var(--veryDarkViolet);
+  background-color: var(--veryLightGrey);
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-nav {
+  visibility: hidden;
+  opacity: 0;
+}
+
 
 .hero-wrapper {
   background-color:  var(--darkViolet);
@@ -184,6 +258,15 @@ footer {
   top:  70px;
 }
 
+.social-icon {
+  fill: #837D88;
+}
+
+.social-icon:hover {
+  fill: #625d66;
+  cursor: pointer;
+}
+
 .footer-category-links {
   color: var(--darkViolet);
   font-weight: 700;
@@ -193,6 +276,14 @@ footer {
 .footer-category-links li {
   padding-bottom: 12px;
   letter-spacing: .06rem;
+}
+
+.footer-category-links li a {
+  color: var(--veryDarkViolet)
+}
+
+.footer-category-links li a:hover {
+  text-decoration: underline;
 }
 
 .background-texture {
