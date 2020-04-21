@@ -32,12 +32,17 @@ a:hover {
 
 .header-icons {
   height: 8vh;
-  padding: 10px;
+  padding: 10px 25px;
   background-color: #ffffff;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.close-menu {
+  position: relative;
+  left: -20px;
 }
 
 .nav-container {
@@ -53,7 +58,7 @@ a:hover {
   background-image: url('./images/bg-pattern-mobile-nav.svg');
   background-position: bottom;
   background-repeat: no-repeat;
-  transition: linear .3s;
+  transition: ease-in-out .1s;
   z-index:5;
 }
 
@@ -113,9 +118,9 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-
+  padding: 30px 10px;
 }
+
 .hero-text-elements {
   text-align: center;
   color: var(--veryLightGrey);
@@ -134,6 +139,14 @@ a:hover {
   line-height: 2rem;
   padding: 0 10px;
   font-weight: 400;
+}
+
+.desktop-hero-image {
+  display: none;
+}
+
+.hero-texture {
+  display:none;
 }
 
 h1, h2, h3 {
@@ -168,7 +181,7 @@ h3 {
   position: relative;
   text-align: center;
   color: var(--veryDarkViolet);
-  padding-top: 190px;
+  padding-top: 170px;
   padding-bottom: 70px;
 }
 
@@ -181,10 +194,15 @@ h3 {
   width: 40%;
   border-bottom: 2px solid #d3d1d1;
   position: absolute;
-  top: 165px;
+  top: 145px;
   left: 30%;
   right: 30%;
 
+}
+
+.points-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .about-point {
@@ -192,8 +210,10 @@ h3 {
 }
 
 .about-point p {
+  margin: 0 auto;
   color: var(--darkGreyViolet);
   line-height: 1.60rem;
+  width: 91%;
 }
 
 .more-info-section {
@@ -204,10 +224,11 @@ h3 {
   text-align: center;
   background-color: var(--darkViolet);
   color: var(--veryLightGrey);
-  padding: 45px 8px 90px 8px;
+  padding: 45px 8px 80px 8px;
   background-image: url('./images/bg-pattern-how-we-work-mobile.svg');
   background-position: top right;
   background-repeat: no-repeat;
+  margin-bottom: 90px;
 }
 
 .more-info-header {
@@ -228,13 +249,15 @@ ul {
 }
 
 footer {
-  background-color: #d3d2d2;
+  background-color: #fafafa;
   text-align: center;
-  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
   background-image: url('./images/bg-pattern-footer-mobile.svg');
   background-position: top left;
   background-repeat: no-repeat;
 }
+
 
 .social-icons-wrapper {
   position: relative;
@@ -248,14 +271,14 @@ footer {
   margin: 0 10px;
 }
 
-.social-icons-wrapper::after {
+.footer-header::after {
   content: '';
   position: absolute;
   border-bottom: 2px solid #c2c1c1;
   width: 90%;
-  left: auto;
-  right: auto;
-  top:  70px;
+  left: 5%;
+  right: 5%;
+  bottom: 0;
 }
 
 .social-icon {
@@ -286,7 +309,11 @@ footer {
   text-decoration: underline;
 }
 
-.background-texture {
+.background-texture1 {
+  display: none;
+}
+
+.background-texture2 {
   top: -155px;
   right: 0px;
   position: absolute;
@@ -294,7 +321,8 @@ footer {
 }
 
 .footer-header {
-  padding: 70px 0 60px 0;
+  padding: 70px 0 20px 0;
+  position: relative;
 }
 
 @media only screen and  (min-width: 1000px) {
@@ -312,7 +340,10 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 100px;
+    padding: 10px 135px;
+    z-index: 4;
+    position: relative;
+    background-color: #ffffff;
   }
 
   .nav-container {
@@ -338,7 +369,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 0;
+    padding-right: 30px;
   }
 
   .nav-options li a {
@@ -374,20 +405,153 @@ footer {
 
  .hero-wrapper {
    flex-direction: row-reverse;
-   background-image: url('./images/bg-pattern-intro-right-desktop.svg');
-   background-position: top right;
-   background-repeat: no-repeat;
+   background-image: none;
+   height: 75vh;
+   padding-bottom: 0;
  }
 
  .hero-text-elements {
+   position: relative;
    text-align: left;
    justify-content: center;
    background-image: none;
-   width: 50%;
+   width: 40%;
+   padding-left: 0;
+   padding-right: 0;
+   padding-top: 140px;
  }
+ .hero-text {
+   padding: 0;
+   margin-top: 20px;
+   margin-bottom: 35px;
+   line-height: 1.5rem;
+   width: 95%
+ }
+
  .hero-image {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    position: relative;
-   top: 110px;
-  z-index: 0;
+   top: 100px;
+   z-index: 0;
+   width: 40%;
  }
+
+ .hero-texture {
+   display: block;
+   position: absolute;
+   z-index: 2;
+   right: 0;
+   top: -10px;
+
+ }
+ 
+.desktop-hero-image {
+  display: block;
+  max-width: 540;
+  max-height: 575px;
+}
+
+.mobile-hero-image {
+  display: none;
+  
+}
+
+h1 {
+  font-size: 3.85rem;
+  line-height: 3.3rem;
+  width: 80%;
+}
+
+h1:before {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid var(--veryLightGrey);
+  top: 65px;
+  width: 23%
+}
+ .background-texture1 {
+   display: block;
+   position: absolute;
+   top: -170px;
+   left: 0;
+ } 
+
+ .background-texture2 {
+   display: none ;
+ }
+ 
+ .about-wrapper {
+   text-align: left;
+   padding-left: 150px;
+   padding-right: 150px;
+   padding-top: 340px;
+ }
+.about-point {
+  width: 33%;
+}
+
+  .points-wrapper {
+    flex-direction: row;
+  }
+
+  .about-point p {
+    width:95%;
+  }
+
+  .about-header::before {
+    content: '';
+    width: 7%;
+    border-bottom: 2px solid #d3d1d1;
+    position: absolute;
+    top: 285px;
+    left: 155px;  
+  }
+  .more-info-section {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 155px 100px 155px;
+    padding: 80px 50px;
+    background-image: url('./images/bg-pattern-how-we-work-desktop.svg');
+  }
+
+  .more-info-header {
+    margin: 0;
+    width: 40%
+  }
+
+  footer {
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+  }
+  .footer-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .footer-header::after {
+    width: 80%;
+    left:10%;
+    right:10%;
+  }
+
+  .footer-category-wrapper {
+    text-align: left;
+  }
+
+  .footer-links-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2% 25% 2% 10%;
+  }
 }
